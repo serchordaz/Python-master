@@ -3,9 +3,9 @@ import mysql.connector
 
 try: 
     cnx = connection=mysql.connector.connect(
-        host='localhost',
+        host='192.168.1.70',
         port=3306,
-        user='serchordaz',
+        user='sergiolan',
         password='1234',
         db='codigoiot'
     )
@@ -14,7 +14,7 @@ try:
         print("Conexión Exitosa")
         #cursor
         cursor=connection.cursor()
-        query_insert = "INSERT INTO rfid (nombre,texto,rfid) VALUES ('Sergio Ordaz','Test Python 2',849155697731)"
+        query_insert = "INSERT INTO rfid (nombre,texto,rfid) VALUES ('Sergio Ordaz','Test Python 3',849155697731)"
         cursor.execute(query_insert)
         cnx.commit()
         print("Query OK")
